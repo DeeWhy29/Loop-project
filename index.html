@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Loop Practical</h1>
+
+    <input type="search" id="searchinput" placeholder="Enter a name">
+    <button onclick="searchName()">search</button>
+    <p id="result"></p>
+
+
+    <script>
+        // Class-Work
+         let names = ["Ahmad","Muhammad","Faruq",
+         "Sulton","Malik","Fawaz","Fatiu","Toyin",
+         "Tosin","Adedayo","Ademola","Adeleke","Lekan","Sodiq",
+         "Ibrahim","Soliu","Sola",
+         "Aisha","Azeez","Habeeb","Adam"];
+
+        function searchName() {
+            let input = document.getElementById("searchinput").value;
+            let output = document.getElementById("result");
+            let found = false;
+
+            for(let name of names){
+
+
+                
+            if (names === input){
+                found = true;
+                output.innerHTML = "Student found:" + names;
+                break;
+            }
+        }
+                if(found === false){
+                    output.innerHTML = "Student name not found";
+                
+            }
+        }
+
+        // Assignment
+        // Question 1
+        console.log("Question 1")
+        for (let i =1; i < 20; i++){
+            if (i % 2 === 0){
+                console.log("This are the even numbers",i);
+            }
+        }
+
+        // Question 2
+        console.log("Question 2")
+        let students = ["Tunde","Bola","Sola","Ade"]
+        for (let i = 0; i < students.length; i++){
+            console.log(students[i]+" "+"is present");
+        }
+        // For Of Method 
+        console.log("[This is the For Of Method]")
+        for (let student of students){
+            console.log(student +" "+"is present");
+        }
+
+        // Question 3
+        console.log("Question 3")
+        let numbers=[10,20,30,40,50];
+        let total = 0;
+        for (let i=0; i< numbers.length; i++){
+            total= total + numbers[i];
+        }
+         console.log("Total is"+ " "+ total)
+
+        //  Question 4
+        console.log("Question 4")
+        let scores =[45,67,89,34,90,12];
+        let highest= scores[0];
+        for(let i=1; i < scores.length; i++){
+            if (scores[i] > highest){
+                highest= scores[i];
+            }
+        }
+        console.log(highest,+" "+ "is the higest number")
+
+        // Question 5
+        console.log("Question 5")
+        let fruits=["Mango","Orange","Mango","Banana","Mango"];
+        let count = 0;
+        for (let i= 0; i < fruits.length; i++){
+            if(fruits[i]==="Mango"){
+                count++;
+            }
+        }
+        console.log("Mango appear"," "+count,+" " "times")
+        // Question 6
+        
+        console.log("Question 6")
+        let car={
+            brand: "Toyota",
+            model: "camry",
+            year: 2020,
+            color: "black"
+        };
+        for (let key in car){
+            console.log(key + ": "+ car[key]);
+        }
+        // Question 7
+        console.log("Question 7")
+        let products =[
+            {name: "Shoe", price: 5000},
+            {name: "Bag", price: 3000},
+            {name: "Cap", price: 1500}
+        ];
+        for (let i=0; i< products.length; i++){
+            console.log(products[i].name +" "+ "is"+ " "+ products[i].price);
+        }
+        // Question 8
+         console.log("Question 8")
+         let letters =["a","b","c","d","e"];
+         let reversed=[];
+         for(let i = letters.length - 1; i >= 0; i--){
+             console.log(letters[i]);
+             reversed.push(letters[i]);
+         }
+        console.log(reversed)
+
+        // Question 9
+        console.log("Question 9")
+        let numbs = [1,2,3,4,5,6,7,8,9,10];
+        let evenNumbers = [];
+        for(let i=0; i< numbs.length; i++){
+            if (numbs[i] % 2 === 0){
+                evenNumbers.push(numbs[i]);
+            }
+        }
+        console.log(evenNumbers);
+
+        // Question 10
+        console.log("Question 10")
+        let cart = [
+            {name:"Bread", price: 1200, qty: 2},
+            {name:"Milk", price: 800, qty: 1},
+            {name:"Sugar", price: 500, qty: 3},
+        ];
+        let grandTotal = 0;
+        for (let i =0; i< cart.length; i++){
+            let total = cart[i].price * cart[i].qty;
+            grandTotal += total; 
+        }
+        console.log("The grandtotal is",+" "+grandTotal);
+
+
+    
+        
+        
+        
+
+
+
+    
+
+
+    </script>
+    
+</body>
+</html>
